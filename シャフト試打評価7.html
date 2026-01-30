@@ -272,7 +272,7 @@ function saveData(){
 }
 
 function loadData(){
-  SAMPLE_NAMES.forEach(addSample);
+  SAMPLE_NAMES.forEach((name, i) => addSample(i, name));
   const r=localStorage.getItem(STORAGE_KEY);
   if(!r)return;
   const d=JSON.parse(r);
@@ -307,4 +307,5 @@ loadData();
 
 </body>
 </html>
+
 
